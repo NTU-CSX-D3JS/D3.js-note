@@ -265,6 +265,128 @@ knit        : slidify::knit2slides
 
 ---
 
+<div style='text-align: center;'>
+<img  src='.\img\d3_3_18.png' />
+</div >
+
+---
+
+## 現在新增一筆資料來看看會發生什麼事 ?
+<div style='text-align: center;'>
+<img  src='.\img\d3_3_19.png' />
+</div >
+
+---
+
+## 資料為 60 的長條圖居然和 50 一樣長 ?
+<div style='text-align: center;'>
+<img  src='.\img\d3_3_20.png' />
+</div >
+
+---
+
+## 資料為 60 的長條圖居然和 50 一樣長 ?
+<div style='text-align: center;'>
+<img  src='.\img\d3_3_21.png' />
+</div >
+
+---
+
+## Scales 方法使用 :
+```{}
+	<script>
+		var dataArray = [20, 40, 50, 60];
+		var width = 500; var height = 500;
+		
+		var widthScale = d3.scaleLinear()
+							.domain([0, 60])
+							.range([0, width]);
+		var canvas = d3.select("body")
+						.append("svg").attr("width", width).attr("height", height);
+		var bars = canvas.selectAll("rect")
+					.data(dataArray)
+					.enter()
+						.append("rect")
+						.attr("width", function(d){return widthScale(d);})
+						.attr("height", 50)
+						.attr("y", function(d, i){return i*100});
+	</script>
+```
+
+---
+
+## 變數等價寫法 :
+<img  height="500" src='.\img\d3_3_23.png' />
+
+---
+
+## 使用 Scales 方法 :
+<img  height="500" src='.\img\d3_3_24.png' />
+
+---
+
+## 使用 Scales 方法 :
+<img  height="500" src='.\img\d3_3_25.png' />
+
+---
+
+## 使用 Scales 方法 :
+<img  height="500" src='.\img\d3_3_26.png' />
+
+---
+
+## 使用 Scales 方法 :
+<img  height="500" src='.\img\d3_3_27.png' />
+
+---
+
+## 使用 Scales 後的結果圖 :
+<img src='.\img\d3_3_28.png' />
+
+---
+
+## 補充 : 其實連 color 都可以 Scale :
+只要補上這幾行 :
+```{}
+		var color = d3.scaleLinear()
+						.domain([0, 60])
+						.range(["red", "blue"])
+```
+然後在變數 bars 這邊也補上一行 :
+```{}
+    .attr("fill", function(d){return color(d)})
+```
+
+---
+
+## 就能製造出以下 color scales 效果 :
+<img src='.\img\d3_3_29.png' />
+
+---
+
+## 完整 code 如下 :
+```{}
+	<script>
+		var dataArray = [20, 40, 50, 60];
+		var width = 500;	var height = 500;
+		var widthScale = d3.scaleLinear().domain([0, 60]).range([0, width]);
+		var color = d3.scaleLinear().domain([0, 60]).range(["red", "blue"])
+		
+		var canvas = d3.select("body")
+						.append("svg").attr("width", width).attr("height", height);
+		var bars = canvas.selectAll("rect").data(dataArray)
+					.enter()
+						.append("rect")
+						.attr("width", function(d){return widthScale(d);})
+						.attr("height", 50)
+						.attr("fill", function(d){return color(d)})
+						.attr("y", function(d, i){return i*100});
+	</script>
+```
+
+
+---
+
 ## 觀念總結 :
 
 1. 在繪製 d3.js 的圖形之前，要先創建一個畫布 canvas 變數，這楊才有辦法繼續在上面做圖。
@@ -273,15 +395,9 @@ knit        : slidify::knit2slides
 
 3. function 的 i 參數的使用也很重要，其功能很適合用在另外一個軸的距離設定上。
 
- 
+4. 資料範圍很容易超過原先設定的 canvas 範圍，因此 Scales 的使用也非常重要。 
    
-
-
-
-
-
-
-
+5. Color 也是能夠 Scales 的。(p.s color 的參數是 fill)
 
 
 

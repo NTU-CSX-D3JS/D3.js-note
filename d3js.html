@@ -529,6 +529,208 @@
 </slide>
 
 <slide class="" id="slide-42" style="background:;">
+  <article data-timings="">
+    <p><div style='text-align: center;'>
+<img  src='.\img\d3_3_18.png' />
+</div ></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-43" style="background:;">
+  <hgroup>
+    <h2>現在新增一筆資料來看看會發生什麼事 ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><div style='text-align: center;'>
+<img  src='.\img\d3_3_19.png' />
+</div ></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>資料為 60 的長條圖居然和 50 一樣長 ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><div style='text-align: center;'>
+<img  src='.\img\d3_3_20.png' />
+</div ></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>資料為 60 的長條圖居然和 50 一樣長 ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><div style='text-align: center;'>
+<img  src='.\img\d3_3_21.png' />
+</div ></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-46" style="background:;">
+  <hgroup>
+    <h2>Scales 方法使用 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>    &lt;script&gt;
+        var dataArray = [20, 40, 50, 60];
+        var width = 500; var height = 500;
+
+        var widthScale = d3.scaleLinear()
+                            .domain([0, 60])
+                            .range([0, width]);
+        var canvas = d3.select(&quot;body&quot;)
+                        .append(&quot;svg&quot;).attr(&quot;width&quot;, width).attr(&quot;height&quot;, height);
+        var bars = canvas.selectAll(&quot;rect&quot;)
+                    .data(dataArray)
+                    .enter()
+                        .append(&quot;rect&quot;)
+                        .attr(&quot;width&quot;, function(d){return widthScale(d);})
+                        .attr(&quot;height&quot;, 50)
+                        .attr(&quot;y&quot;, function(d, i){return i*100});
+    &lt;/script&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>變數等價寫法 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  height="500" src='.\img\d3_3_23.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-48" style="background:;">
+  <hgroup>
+    <h2>使用 Scales 方法 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  height="500" src='.\img\d3_3_24.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>使用 Scales 方法 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  height="500" src='.\img\d3_3_25.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>使用 Scales 方法 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  height="500" src='.\img\d3_3_26.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-51" style="background:;">
+  <hgroup>
+    <h2>使用 Scales 方法 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  height="500" src='.\img\d3_3_27.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-52" style="background:;">
+  <hgroup>
+    <h2>使用 Scales 後的結果圖 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src='.\img\d3_3_28.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-53" style="background:;">
+  <hgroup>
+    <h2>補充 : 其實連 color 都可以 Scale :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>只要補上這幾行 :</p>
+
+<pre><code>        var color = d3.scaleLinear()
+                        .domain([0, 60])
+                        .range([&quot;red&quot;, &quot;blue&quot;])
+</code></pre>
+
+<p>然後在變數 bars 這邊也補上一行 :</p>
+
+<pre><code>    .attr(&quot;fill&quot;, function(d){return color(d)})
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-54" style="background:;">
+  <hgroup>
+    <h2>就能製造出以下 color scales 效果 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src='.\img\d3_3_29.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-55" style="background:;">
+  <hgroup>
+    <h2>完整 code 如下 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>    &lt;script&gt;
+        var dataArray = [20, 40, 50, 60];
+        var width = 500;    var height = 500;
+        var widthScale = d3.scaleLinear().domain([0, 60]).range([0, width]);
+        var color = d3.scaleLinear().domain([0, 60]).range([&quot;red&quot;, &quot;blue&quot;])
+
+        var canvas = d3.select(&quot;body&quot;)
+                        .append(&quot;svg&quot;).attr(&quot;width&quot;, width).attr(&quot;height&quot;, height);
+        var bars = canvas.selectAll(&quot;rect&quot;).data(dataArray)
+                    .enter()
+                        .append(&quot;rect&quot;)
+                        .attr(&quot;width&quot;, function(d){return widthScale(d);})
+                        .attr(&quot;height&quot;, 50)
+                        .attr(&quot;fill&quot;, function(d){return color(d)})
+                        .attr(&quot;y&quot;, function(d, i){return i*100});
+    &lt;/script&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-56" style="background:;">
   <hgroup>
     <h2>觀念總結 :</h2>
   </hgroup>
@@ -537,6 +739,8 @@
 <li><p>在繪製 d3.js 的圖形之前，要先創建一個畫布 canvas 變數，這楊才有辦法繼續在上面做圖。</p></li>
 <li><p>熟悉 function 參數 d 的使用，這樣才能夠將要輸入的資料一個一個對應到要畫的東西上面。</p></li>
 <li><p>function 的 i 參數的使用也很重要，其功能很適合用在另外一個軸的距離設定上。</p></li>
+<li><p>資料範圍很容易超過原先設定的 canvas 範圍，因此 Scales 的使用也非常重要。 </p></li>
+<li><p>Color 也是能夠 Scales 的。(p.s color 的參數是 fill)</p></li>
 </ol>
 
   </article>
@@ -795,8 +999,92 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='觀念總結 :'>
+        data-slide=42 title='NA'>
          42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='現在新增一筆資料來看看會發生什麼事 ?'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='資料為 60 的長條圖居然和 50 一樣長 ?'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='資料為 60 的長條圖居然和 50 一樣長 ?'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Scales 方法使用 :'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='變數等價寫法 :'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='使用 Scales 方法 :'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='使用 Scales 方法 :'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='使用 Scales 方法 :'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='使用 Scales 方法 :'>
+         51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='使用 Scales 後的結果圖 :'>
+         52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='補充 : 其實連 color 都可以 Scale :'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='就能製造出以下 color scales 效果 :'>
+         54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='完整 code 如下 :'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='觀念總結 :'>
+         56
       </a>
     </li>
   </ul>
