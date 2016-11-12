@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>D3 . JS tutorial (Basic)</title>
+  <meta charset="utf-8">
+  <meta name="description" content="D3 . JS tutorial (Basic)">
+  <meta name="author" content="Bigmoumou">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>D3 . JS tutorial (Basic)</h1>
+    <h2>from d3.js's document</h2>
+    <p>Bigmoumou<br/>NTU Econ</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Syllabus :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_0_1.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Let&#39;s start our learning now <code>\(^ ^)/</code>:</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_0_2.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Hello World to D3.js :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_1.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Hello World to D3.js :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_2.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Hello World to D3.js :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_3.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Hello World to D3.js :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_4.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Two Basic method : select &amp; append ( + text )</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>select ( ) : 選擇 html 標籤位置。ex. body    </p></li>
+<li><p>append ( ) : 加入特定項目的方法。ex. 加入 p (段落), 加入 svg (圖形)    </p></li>
+<li><p>text ( ) : 輸入文字。   </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>D3 物件導向小介紹 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_5.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>D3 Hello World 流程說明 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_1_6.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <article data-timings="">
+    <div style='text-align: left;'>
+<img height='450' src='.\img\d3_0_3.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Essential graph skill : Basic SVG graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_1.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Essential graph skill : Basic SVG graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_2.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Essential graph skill : Basic SVG graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_3.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Essential graph skill : Basic SVG graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_4.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Essential graph skill : Basic SVG graph</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_5.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>The graph will look like ~</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_6.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Now , try to draw a graph like this :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_7.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Now , try to draw a graph like this :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_8.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>D3.js 坐標軸提醒 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_8_1.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>The answer is :</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+<img height='450' src='.\img\d3_2_9.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>補充 : 畫直線(單條)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>    &lt;script&gt;
+        var canvas = d3.select(&quot;body&quot;)
+                        .append(&quot;svg&quot;)
+                        .attr(&quot;width&quot;, 500)
+                        .attr(&quot;height&quot;, 500);
+        var line = canvas.append(&quot;line&quot;)
+                        .attr(&quot;x1&quot;, 0)
+                        .attr(&quot;y1&quot;, 100)
+                        .attr(&quot;x2&quot;, 400)
+                        .attr(&quot;y2&quot;, 400)
+                        .attr(&quot;stroke&quot;, &quot;green&quot;)
+                        .attr(&quot;stroke-width&quot;, 5)
+    &lt;/script&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>補充 : 畫直線(單條)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='450' src='.\img\d3_2_10.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <article data-timings="">
+    <div style='text-align: center;'>
+<img height='450' src='.\img\d3_3_1.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Bar chart ~!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>    &lt;script&gt;
+        var dataArray = [20, 40, 50];
+
+        var canvas = d3.select(&quot;body&quot;)
+                        .append(&quot;svg&quot;)
+                        .attr(&quot;width&quot;, 500)
+                        .attr(&quot;height&quot;, 500);
+
+
+        var bars = canvas.selectAll(&quot;rect&quot;)
+                    .data(dataArray)
+                    .enter()
+                        .append(&quot;rect&quot;)
+                        .attr(&quot;width&quot;, function(d){return d*10;})
+                        .attr(&quot;height&quot;, 50);
+    &lt;/script&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Bar chart ~!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_2.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Bar chart ~!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_3.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Bar chart ~!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_4.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>D3 中 Function 的使用 ;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_5.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>D3 中 Function 的使用 ;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_6.png' /> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>D3 中 Function 的使用 ;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_7.png' /> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>D3 中 Function 的使用 ;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_8.png' /> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>我們希望產生的效果如下 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_9.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>我們希望產生的效果如下 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_10.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>但實際結果是否不如預期 ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_11.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>其實還少了一條 code :</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='text-align: center;'>
+<img  src='.\img\d3_3_12.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Y 軸設定方式 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_13.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Function 參數 i 介紹 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_14.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Function 參數 i 介紹 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img height='520' src='.\img\d3_3_15.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Function 參數 i 的使用 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><div style='text-align: center;'>
+<img  src='.\img\d3_3_16.png' />
+</div ></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>圖片解說 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  src='.\img\d3_3_10.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>圖片解說 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img  src='.\img\d3_3_17.png' /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-42" style="background:;">
+  <hgroup>
+    <h2>觀念總結 :</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>在繪製 d3.js 的圖形之前，要先創建一個畫布 canvas 變數，這楊才有辦法繼續在上面做圖。</p></li>
+<li><p>熟悉 function 參數 d 的使用，這樣才能夠將要輸入的資料一個一個對應到要畫的東西上面。</p></li>
+<li><p>function 的 i 參數的使用也很重要，其功能很適合用在另外一個軸的距離設定上。</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Syllabus :'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Let&#39;s start our learning now <code>\(^ ^)/</code>:'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Hello World to D3.js :'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Hello World to D3.js :'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Hello World to D3.js :'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Hello World to D3.js :'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Two Basic method : select &amp; append ( + text )'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='D3 物件導向小介紹 :'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='D3 Hello World 流程說明 :'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='NA'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Essential graph skill : Basic SVG graph'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Essential graph skill : Basic SVG graph'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Essential graph skill : Basic SVG graph'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Essential graph skill : Basic SVG graph'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Essential graph skill : Basic SVG graph'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='The graph will look like ~'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Now , try to draw a graph like this :'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Now , try to draw a graph like this :'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='D3.js 坐標軸提醒 :'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='The answer is :'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='補充 : 畫直線(單條)'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='補充 : 畫直線(單條)'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='NA'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Bar chart ~!'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Bar chart ~!'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Bar chart ~!'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Bar chart ~!'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='D3 中 Function 的使用 ;'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='D3 中 Function 的使用 ;'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='D3 中 Function 的使用 ;'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='D3 中 Function 的使用 ;'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='我們希望產生的效果如下 :'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='我們希望產生的效果如下 :'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='但實際結果是否不如預期 ?'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='其實還少了一條 code :'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Y 軸設定方式 :'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Function 參數 i 介紹 :'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Function 參數 i 介紹 :'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Function 參數 i 的使用 :'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='圖片解說 :'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='圖片解說 :'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='觀念總結 :'>
+         42
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
