@@ -42,9 +42,12 @@
 				// transition function:
 				.transition().duration(2000)
 				.attr("y", function(d){
+					console.log(y(d));
 					return y(d);
+
 				})
 				.attr("height", function(d){
+					console.log(h - y(d));
 					return h - y(d);
 				})
 
